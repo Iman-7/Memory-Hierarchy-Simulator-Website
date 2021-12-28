@@ -1,0 +1,68 @@
+{% extends "public/templates/public_templates.html" %}
+{% block title %}Output{% endblock %}
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Output</h1>
+            <hr>
+
+            {% set count = namespace(value=0)  %}
+
+            {% for line in out.splitlines() %}
+            
+            {% if count.value == C + 1 %}
+            </table>
+            {% set count.value = 0 %}
+            {% endif%}
+
+            {% if line.startswith("Idx") or line.startswith("0") or line.startswith("1") or line.startswith("2")
+             or line.startswith("3") or line.startswith("4") or line.startswith("5") or line.startswith("6")
+             or line.startswith("7") or line.startswith("8") or line.startswith("9")
+            %}
+
+            {% if count.value == 0 %}
+            <table>
+          {% endif%}
+
+          <tr>
+            {% for i in line.split()%}
+            {% if count.value == 0 %}
+            <th>{{ i }}</th>
+              {% else%}
+            <td>{{ i }}</td>
+            {% endif%}
+            {% endfor %} 
+          </tr>
+            {% set count.value = count.value + 1 %}
+
+            {% else %}      
+            <li> {{ line }} </li>
+            <br>
+            {%endif%}
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+            <!-- <table>
+                <tr>
+                  <th>Month</th>
+                  <th>Savings</th>
+                </tr>
+                <tr>
+                  <td>January</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>$80</td>
+                </tr>
+              </table> -->

@@ -1,0 +1,23 @@
+{% extends "public/templates/public_templates.html" %}
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3> Welcome to our Memory Hierarchy Simulator!! </h3>
+            <hr>
+            <p> This project is used to implement a  Memory Hierarchy Simulator to trace the Direct Mapping caching system. </p>
+            <li> To use the simulator, please go to the <strong>"Test"</strong> tab to enter the input.</li>
+            <li> After enetering all the inputs, you will be immediately redirected to the <strong>"Output"</strong> tab where you can see the output.</li>
+            <li> After each memory access and until the sequence ends, the program outputs the following:
+                <br>
+                  1) Valid bits and tags of all entries in the cache represented in a table. <br>
+                  2) Total number of accesses. <br>
+                  3) The hit and miss ratios. <br>
+                  4) The Average Memory Access Time (AMAT) of the memory hierarchy (in cycles).
+            </li>
+        </div>
+    </div>
+</div>
+{% endblock %}

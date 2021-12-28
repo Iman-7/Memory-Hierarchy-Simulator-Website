@@ -1,0 +1,18 @@
+{% extends "public/templates/public_templates.html" %}
+{% block title %}Memory Hierarchy Simulator{% endblock %}
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3> Now, Upload the Addresses Sequence File: </h3>
+            <hr> 
+            <title>Now, Upload the Addresses Sequence File</title>
+            <form method=post enctype=multipart/form-data>
+              <input type=file name=file>
+              <input type=submit value=Run>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

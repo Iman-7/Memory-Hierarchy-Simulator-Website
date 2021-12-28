@@ -1,0 +1,30 @@
+{% extends "public/templates/public_templates.html" %}
+{% block title %} Memory Hierarchy Simulator {% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2> Come on test our Memory Hierarchy Simulator: </h2>
+            <hr>
+            <p1>Please, enter the following:</p1>
+            <h4>1. The total cache size (S): </h4>
+            <hr>
+            <form method="POST">
+                <input name="box1">
+                <hr>
+                <h4>2. The cache line size (L): </h4>
+                <hr>
+                <input name="box2">
+                <hr>
+                <h4>3. The number of cycles needed to access the cache: </h4>
+                <hr>
+                <input name="box3">
+                <hr>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
